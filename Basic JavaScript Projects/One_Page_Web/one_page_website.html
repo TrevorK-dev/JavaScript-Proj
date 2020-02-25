@@ -3,99 +3,71 @@
 	<head>
 		<title>Custom Website</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./CSS/one_page_web.css">
+		<script src="JS/one_page_web.js"></script>
 	</head>
 	<body>
-		<ul>
-			<a href="#home" id="link"><li>Home</li>
-			<a href="#gallery" id="link"><li>GALLERY</li>
-		</ul>
-	
-		<div>
-			<a href="#home" id="link"><li>Home</li>
-		</div>
-		
-		<div id="#home">
-			<div>
-				<span>Custom Website</span>
+		<h2 style="text-align:center">Lightbox</h2>		
+			<div class="row">
+			  <div class="column">
+				<img src="images/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+				<img src="images/img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+				<img src="images/img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+				<img src="images/img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+			  </div>
 			</div>
-			<div class="row" id="#gallery">
-				<div class="column">
-				  <img src="images/thumbnail_1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-				</div>
-				<div class="column">
-				  <img src="images/thumbnail_1.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-				</div>
-				<div class="column">
-				  <img src="images/thumbnail_1.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-				</div>
-				<div class="column">
-				  <img src="images/thumbnail_1.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-				</div>
-			  </div>
-			  
-			  <!-- The Modal/Lightbox -->
-			  <div id="myModal" class="modal">
-				<span class="close cursor" onclick="closeModal()">&times;</span>
-				<div class="modal-content">
-			  
-				  <div class="mySlides">
-					<div class="numbertext">1 / 4</div>
-					<img src="images/thumbnail_1.jpeg" style="width:100%">
-				  </div>
-			  
-				  <div class="mySlides">
-					<div class="numbertext">2 / 4</div>
-					<img src="images/thumbnail_1.jpeg" style="width:100%">
-				  </div>
-			  
-				  <div class="mySlides">
-					<div class="numbertext">3 / 4</div>
-					<img src="images/thumbnail_1.jpeg" style="width:100%">
-				  </div>
-			  
-				  <div class="mySlides">
-					<div class="numbertext">4 / 4</div>
-					<img src="images/thumbnail_1.jpeg" style="width:100%">
-				  </div>
-			  
-				  <!-- Next/previous controls -->
-				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-			  
-				  <!-- Caption text -->
-				  <div class="caption-container">
-					<p id="caption"></p>
-				  </div>
-			  
-				  <!-- Thumbnail image controls -->
-				  <div class="column">
-					<img class="demo" src="images/thumbnail_1.jpeg" onclick="currentSlide(1)" alt="Nature">
-				  </div>
-			  
-				  <div class="column">
-					<img class="demo" src="images/thumbnail_1.jpeg" onclick="currentSlide(2)" alt="Snow">
-				  </div>
-			  
-				  <div class="column">
-					<img class="demo" src="images/thumbnail_1.jpeg" onclick="currentSlide(3)" alt="Mountains">
-				  </div>
-			  
-				  <div class="column">
-					<img class="demo" src="images/thumbnail_1.jpeg" onclick="currentSlide(4)" alt="Lights">
-				  </div>
-				</div>
-			  </div>
-		</div>
+		<div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
 
-		<form action="" method="get">
-			First Name: <input type="text" name="First_Name"><br>
-			Last name: <input type="text" name="Last_Name"><br>
-			<input type="submit" calue="Submit">
-		</form>
-		<script src="Pizza_JavaScript/Pizza.js"></script>
-	<div>
-		<p>www.thespacestation.space &nbsp;|&nbsp; &copy; 2016</p>
-	</div>
+                <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/img_nature_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/img_snow_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/img_mountains_wide.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/img_lights_wide.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+
+
+                <div class="column">
+                <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
