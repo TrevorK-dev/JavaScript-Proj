@@ -657,6 +657,7 @@ function square7Animate() {
 			checkForWinCon(); 
 			avatarPlaced(square,paintAvatar); 
 			squareSound();
+		}
 	}
 }
 function square8Animate() {
