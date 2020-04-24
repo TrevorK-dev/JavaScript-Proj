@@ -708,4 +708,4 @@ function animateO(selected) {
 
 function animateX(selected) {
 	selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(-100%)";
-}}
+}
