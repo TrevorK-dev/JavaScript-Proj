@@ -120,7 +120,7 @@ function clearMsg() {
     document.getElementById('gameMsg').innerHTML = "";
 }
 
-function saveSetting(){
+function saveSettings(){
     var p1Index = document.getElementById("player1").selectedIndex;
     var p2Selected = document.getElementById("player1").options;
     var p2index = document.getElementById("player2").selectedIndex;
@@ -161,7 +161,7 @@ function avatarPlaced() {
         showPlayer.innerHTML = "Game Stopped";
         showPlayer.style.color='red';
     }
-    activePlayer = showPlayer,innerHTML;
+    activePlayer = showPlayer.innerHTML;
     if (activePlayer == "Player 1") {
         showPlayer.innerHTML = "Player 2";
     } else {
@@ -218,7 +218,7 @@ function checkForWinCon() {
 
 function check4Tie() {
     var boardState = document.getElementById('boardState').innerHTML;
-    boardState = boardState.subscrting(1);
+    boardState = boardState.substring(1);
     boardState = boardState.split(',');
     var check = document.getElementById('gameMsg').innerHTML;
     if(boardState.length >= 9 && check != "Thats three in a row, Player 1 wins!" && check != "Thats three in a row, Player 2 wins!") {
