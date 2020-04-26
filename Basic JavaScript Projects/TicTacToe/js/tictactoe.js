@@ -36,7 +36,7 @@ function rollForTurn() {
     } else if (pOne < pTwo) {
         first = "Player 2";
         setTimeout(function(){ txt1 = txt1 + "PLayer 2 wins, please choose a square."}, 2000);
-        setTimeout(function(){ writingMsg(txt1);}, 2000)
+        setTimeout(function(){ writeMsg(txt1);}, 2000)
     }
     return first;
 }
@@ -47,7 +47,7 @@ function startGame() {
     if (activePlayer == "") {
         activePlayer = rollForTurn();
     }
-    setTimeout(function() {hideGameMag();}, 4000);
+    setTimeout(function() {hideGameMsg();}, 4000);
 
     var btn = document.getElementById('btnStart');
     btnDisabled(btn);
@@ -135,7 +135,7 @@ function saveSetting(){
 
 function getAvatars() {
     var p1Avatar = document.getElementById("p1Display").innerHTML;
-    var p2Avatar = docuemnt.getElementById("p2Display").innerHTML;
+    var p2Avatar = document.getElementById("p2Display").innerHTML;
     var avatarArray = [p1Avatar,p2Avatar];
     return avatarArray;
 }
@@ -172,7 +172,7 @@ function avatarPlaced() {
 
 function check(info,square) {
     for (var i in info) {
-        var tempInfo = info[i].charAt(0);
+		var tempInfo = info[i].charAt(0);
         if (tempInfo == square) {
             return tempInfo;
         }
@@ -187,7 +187,7 @@ function recordMoves(square) {
     return verdict;
 }
 
-function recordMove(currectMove) {
+function recordMove(currentMove) {
     var target = document.getElementById('boardState');
     var previousMoves = target.innerHTML;
     target.innerHTML = previousMoves+currentMove;
@@ -201,7 +201,7 @@ function checkForWinCon() {
     info = info.split(',');
     info.sort();
     for (var i in info) {
-        squareArray.push(info[1],charAt(0));
+        squareArray.push(info[i].charAt(0));
     }
 
     checkWinCon1(info,squareArray);
