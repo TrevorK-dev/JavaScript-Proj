@@ -24,3 +24,14 @@ function array_function() {
         Cat_Picture[2] + ".";
 }
 
+let car = {
+    make: "Dodge ",
+    model: "Viper ",
+    year: "2021 ",
+    color: "red ",
+    description: function() {
+        return "The car is a " + this.year + this.color + this.make + this.model;
+    }
+};
+document.getElementById("Car_Object").innerHTML = car.description();
+
