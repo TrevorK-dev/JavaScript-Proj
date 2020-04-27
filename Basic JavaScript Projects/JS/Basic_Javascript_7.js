@@ -10,5 +10,5 @@ function Time_function() {
     else {
         Reply = "It is evening time!";
     }
-    document.getElementById("Tune_of_day").innerHTML = Reply;
+    document.getElementById("Time_of_day").innerHTML = Reply;
 }
