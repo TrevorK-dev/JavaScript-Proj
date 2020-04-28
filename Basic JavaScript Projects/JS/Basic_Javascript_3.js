@@ -5,7 +5,6 @@ function Function_3() {
 var x = 6;
 var y = 3;
 
-document.getElementById("demo").innerHTML = 
-    print(x + y);
+document.getElementById("demo").innerHTML = (x+y)
 
 
