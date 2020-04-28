@@ -26,3 +26,13 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+function call_loop() {
+  var Digit = "";
+  var X = 1;
+  while (X < 11) {
+      Digit += "<br>" + X;
+      X++;
+  }
+  document.getElementById("Loop").innerHTML = Digit;
+}
