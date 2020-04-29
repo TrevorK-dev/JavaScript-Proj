@@ -27,12 +27,16 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-function call_loop() {
-  var Digit = "";
-  var X = 1;
-  while (X < 11) {
-      Digit += "<br>" + X;
-      X++;
+function countdown() {
+  var seconds = document.getElementById("seconds").value;
+
+  function tick() {
+    seconds = seconds - 1;
+    timer.innerHTML = seconds;
+    setTimeout(tick, 1000);
+  if(seconds == -1){
+    alert("Time is up!");
+    }
   }
-  document.getElementById("Loop").innerHTML = Digit;
+  tick();
 }
