@@ -12,3 +12,5 @@ function not_Function() {
 function yes_Function() {
     document.getElementById("Yes").innerHTML = ! (5 > 10);
 }
+
+document.write(10 == 10);
