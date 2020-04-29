@@ -9,7 +9,7 @@ function Age_Function() {
     document.getElementById("How_old_are_you?").innerHTML = Vote;
 }
 
-function Time_Function() {
+function Time_function() {
     var Time = new Date().getHours();
     var Reply;
     if (Time < 12 == Time > 0) {
