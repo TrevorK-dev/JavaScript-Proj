@@ -1,7 +1,7 @@
 function Ride_Function() {
     var height, Can_Ride;
-    Height = document.getElementById("Height").value;
-    Can_Ride = (Heigth < 52) ? "You are too short":"You are tall enough";
+    height = document.getElementById("height").value;
+    Can_Ride = (heigth < 52) ? "You are too short":"You are tall enough";
     document.getElementById("Ride").innerHTML = Can_Ride + " to ride. ";
 }
 
